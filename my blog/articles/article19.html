@@ -21,7 +21,7 @@
              <div class="copy-container">
             <!-- 文章内容 -->
             <h2>一、基础知识</h2> 
-            <pre id="codeBlock"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             /bin     二进制文件系统常规命令
             /boot    系统启动分区系统启动时读取的文件
             /dev     设备文件
@@ -40,50 +40,50 @@
             /sys     内核相关信息
             /tmp     临时文件
             /usr     用户相关设定
-          </pre> 
+          </code></code></pre>
             <h3><a id="12%09Linux_20"></a>1.2 Linux系统命令行的含义</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
  示例&#xff1a;root&#64;app00:~# 
  root    //用户名&#xff0c;root为超级用户
  &#64;       //分隔符
  app00   //主机名称
  ~       //当前所在目录&#xff0c;默认用户目录为~&#xff0c;会随着目录切换而变化&#xff0c;例如&#xff1a;&#xff08;root&#64;app00:/bin# &#xff0c;当前位置在bin目录下&#xff09;
  #       //表示当前用户是超级用户&#xff0c;普通用户为$&#xff0c;例如&#xff1a;&#xff08;&#34;yao&#64;app00:/root$&#34; &#xff0c;表示使用用户&#34;yao&#34;访问/root文件夹&#xff09;
-            </pre> 
+</code> </code></pre>
             <h3><a id="13%09_27"></a>1.3 命令的组成</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             示例&#xff1a;命令 参数名 参数值
-            </pre> 
+            </code></pre>
             <h2><a id="_29"></a>二、基础操作</h2> 
             <h3><a id="21%09_30"></a>2.1 关闭系统</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             (1)立刻关机
               shutdown -h now 或者 poweroff
             (2)两分钟后关机
               shutdown -h 2
-            </pre> 
+            </code></pre>
             <h3><a id="22%09_35"></a>2.2 关闭重启</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             (1)立刻重启
               shutdown -r now 或者 reboot
             (2)两分钟后重启
               shutdown -r 2 
-            </pre> 
+            </code></pre>
             <h3><a id="23%09help_40"></a>2.3 帮助命令&#xff08;help&#xff09;</h3> 
-            <pre id="content">  ifconfig  --help     //查看 ifconfig 命令的用法
-            </pre> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  ifconfig  --help     //查看 ifconfig 命令的用法
+            </code></pre>
             <h3><a id="24%09man_42"></a>2.4 命令说明书&#xff08;man&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
                man shutdown         //打开命令说明后&#xff0c;可按&#34;q&#34;键退出
-            </pre> 
+            </code></pre>
             <h3><a id="25%09su_44"></a>2.5 切换用户&#xff08;su&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
                su yao       //切换为用户&#34;yao&#34;,输入后回车需要输入该用户的密码
   exit         //退出当前用户
-            </pre> 
+            </code></pre>
             <h2><a id="_47"></a>三、目录操作</h2> 
             <h3><a id="31%09cd_48"></a>3.1 切换目录&#xff08;cd&#xff09;</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
               cd /                 //切换到根目录
               cd /bin              //切换到根目录下的bin目录
               cd ../               //切换到上一级目录 或者使用命令&#xff1a;cd ..
@@ -91,59 +91,59 @@
               cd -                 //切换到上次访问的目录
               cd xx(文件夹名)       //切换到本目录下的名为xx的文件目录&#xff0c;如果目录不存在报错
               cd /xxx/xx/x         //可以输入完整的路径&#xff0c;直接切换到目标目录&#xff0c;输入过程中可以使用tab键快速补全
-            </pre> 
+            </code></pre>
             <h3><a id="32%09ls_56"></a>3.2 查看目录&#xff08;ls&#xff09;</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
               ls                   //查看当前目录下的所有目录和文件
               ls -a                //查看当前目录下的所有目录和文件&#xff08;包括隐藏的文件&#xff09;
               ls -l                //列表查看当前目录下的所有目录和文件&#xff08;列表查看&#xff0c;显示更多信息&#xff09;&#xff0c;与命令&#34;ll&#34;效果一样
               ls /bin              //查看指定目录下的所有目录和文件 
-            </pre> 
+            </code></pre>
             <h3><a id="33%09mkdir_61"></a>3.3 创建目录&#xff08;mkdir&#xff09;</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               mkdir tools          //在当前目录下创建一个名为tools的目录
               mkdir /bin/tools     //在指定目录下创建一个名为tools的目录
-            </pre> 
+            </code></pre>
             <h3><a id="33%09rm_64"></a>3.3 删除目录与文件&#xff08;rm&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               rm 文件名              //删除当前目录下的文件
               rm -f 文件名           //删除当前目录的的文件&#xff08;不询问&#xff09;
               rm -r 文件夹名         //递归删除当前目录下此名的目录
               rm -rf 文件夹名        //递归删除当前目录下此名的目录&#xff08;不询问&#xff09;
               rm -rf *              //将当前目录下的所有目录和文件全部删除
               rm -rf /*             //将根目录下的所有文件全部删除【慎用&#xff01;相当于格式化系统】
-            </pre> 
+            </code></pre>
             <h3><a id="34%09mv_71"></a>3.4 修改目录&#xff08;mv&#xff09;</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               mv 当前目录名 新目录名      //修改目录名&#xff0c;同样适用与文件操作
               mv /usr/tmp/tool /opt       //将/usr/tmp目录下的tool目录剪切到 /opt目录下面
               mv -r /usr/tmp/tool /opt    //递归剪切目录中所有文件和文件夹
-            </pre> 
+            </code></pre>
             <h3><a id="35%09cp_75"></a>3.5 拷贝目录&#xff08;cp&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               cp /usr/tmp/tool /opt       //将/usr/tmp目录下的tool目录复制到 /opt目录下面
               cp -r /usr/tmp/tool /opt    //递归剪复制目录中所有文件和文件夹
-            </pre> 
+            </code></pre>
             <h3><a id="36%09find_78"></a>3.6 搜索目录&#xff08;find&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               find /bin -name &#39;a*&#39;        //查找/bin目录下的所有以a开头的文件或者目录
-            </pre> 
+            </code></pre>
             <h3><a id="37%09pwd_80"></a>3.7 查看当前目录&#xff08;pwd&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               pwd                         //显示当前位置路径
-            </pre> 
+            </code></pre>
             <h2><a id="_82"></a>四、文件操作</h2> 
             <h3><a id="41%09touch_83"></a>4.1 新增文件&#xff08;touch&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               touch  a.txt         //在当前目录下创建名为a的txt文件&#xff08;文件不存在&#xff09;&#xff0c;如果文件存在&#xff0c;将文件时间属性修改为当前系统时间
-            </pre> 
+            </code></pre>
             <h3><a id="42%09rm_85"></a>4.2 删除文件&#xff08;rm&#xff09;</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               rm 文件名              //删除当前目录下的文件
               rm -f 文件名           //删除当前目录的的文件&#xff08;不询问&#xff09;
-            </pre> 
+            </code></pre>
             <h3><a id="43%09vivim_88"></a>4.3 编辑文件&#xff08;vi、vim&#xff09;</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               vi 文件名              //打开需要编辑的文件
               --进入后&#xff0c;操作界面有三种模式&#xff1a;命令模式&#xff08;command mode&#xff09;、插入模式&#xff08;Insert mode&#xff09;和底行模式&#xff08;last line mode&#xff09;
               命令模式
@@ -167,150 +167,150 @@
               ## 补充 ##
               vim &#43;10 filename.txt                   //打开文件并跳到第10行
               vim -R /etc/passwd                     //以只读模式打开文件
-            </pre> 
+            </code></pre>
             <h3><a id="44%09_112"></a>4.4 查看文件</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               cat a.txt          //查看文件最后一屏内容
               less a.txt         //PgUp向上翻页&#xff0c;PgDn向下翻页&#xff0c;&#34;q&#34;退出查看
               more a.txt         //显示百分比&#xff0c;回车查看下一行&#xff0c;空格查看下一页&#xff0c;&#34;q&#34;退出查看
               tail -100 a.txt    //查看文件的后100行&#xff0c;&#34;Ctrl&#43;C&#34;退出查看
-            </pre> 
+            </code></pre>
             <h2><a id="_117"></a>五、文件权限</h2> 
             <h3><a id="51%09_118"></a>5.1 权限说明</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               文件权限简介&#xff1a;&#39;r&#39; 代表可读&#xff08;4&#xff09;&#xff0c;&#39;w&#39; 代表可写&#xff08;2&#xff09;&#xff0c;&#39;x&#39; 代表执行权限&#xff08;1&#xff09;&#xff0c;括号内代表&#34;8421法&#34;
               ##文件权限信息示例&#xff1a;-rwxrw-r--
               -第一位&#xff1a;&#39;-&#39;就代表是文件&#xff0c;&#39;d&#39;代表是文件夹
               -第一组三位&#xff1a;拥有者的权限
               -第二组三位&#xff1a;拥有者所在的组&#xff0c;组员的权限
               -第三组三位&#xff1a;代表的是其他用户的权限
-            </pre> 
+            </code></pre>
             <h3><a id="52%09_125"></a>5.2 文件权限</h3> 
-            <pre id="content">  普通授权    chmod &#43;x a.txt    
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  普通授权    chmod &#43;x a.txt    
               8421法     chmod 777 a.txt     //1&#43;2&#43;4&#61;7&#xff0c;&#34;7&#34;说明授予所有权限
-            </pre> 
+            </code></pre>
             <h2><a id="_128"></a>六、打包与解压</h2> 
             <h3><a id="61%09_129"></a>6.1 说明</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               .zip、.rar        //windows系统中压缩文件的扩展名
               .tar              //Linux中打包文件的扩展名
               .gz               //Linux中压缩文件的扩展名
               .tar.gz           //Linux中打包并压缩文件的扩展名
-            </pre> 
+            </code></pre>
             <h3><a id="62%09_134"></a>6.2 打包文件</h3> 
-            <pre id="content">  tar -zcvf 打包压缩后的文件名 要打包的文件
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  tar -zcvf 打包压缩后的文件名 要打包的文件
               参数说明&#xff1a;z&#xff1a;调用gzip压缩命令进行压缩; c&#xff1a;打包文件; v&#xff1a;显示运行过程; f&#xff1a;指定文件名;
               示例&#xff1a;
               tar -zcvf a.tar file1 file2,...      //多个文件压缩打包
-            </pre> 
+            </code></pre>
             <h3><a id="63%09_139"></a>6.3 解压文件</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               tar -zxvf a.tar                      //解包至当前目录
               tar -zxvf a.tar -C /usr------        //指定解压的位置
               unzip test.zip             //解压*.zip文件 
               unzip -l test.zip          //查看*.zip文件的内容 
-            </pre> 
+            </code></pre>
             <h2><a id="_144"></a>七、其他常用命令</h2> 
             <h3><a id="71%09find_145"></a>7.1 find</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               find . -name &#34;*.c&#34;     //将目前目录及其子目录下所有延伸档名是 c 的文件列出来
               find . -type f         //将目前目录其其下子目录中所有一般文件列出
               find . -ctime -20      //将目前目录及其子目录下所有最近 20 天内更新过的文件列出
               find /var/log -type f -mtime &#43;7 -ok rm {} \;     //查找/var/log目录中更改时间在7日以前的普通文件&#xff0c;并在删除之前询问它们
               find . -type f -perm 644 -exec ls -l {} \;       //查找前目录中文件属主具有读、写权限&#xff0c;并且文件所属组的用户和其他用户具有读权限的文件
               find / -type f -size 0 -exec ls -l {} \;         //为了查找系统中所有文件长度为0的普通文件&#xff0c;并列出它们的完整路径
-            </pre> 
+            </code></pre>
             <h3><a id="72%09whereis_152"></a>7.2 whereis</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
                 whereis ls             //将和ls文件相关的文件都查找出来
-            </pre> 
+            </code></pre>
             <h3><a id="73%09which_154"></a>7.3 which</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
                 说明&#xff1a;which指令会在环境变量$PATH设置的目录里查找符合条件的文件。
               which bash             //查看指令&#34;bash&#34;的绝对路径
-            </pre> 
+            </code></pre>
             <h3><a id="74%09sudo_157"></a>7.4 sudo</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               说明&#xff1a;sudo命令以系统管理者的身份执行指令&#xff0c;也就是说&#xff0c;经由 sudo 所执行的指令就好像是 root 亲自执行。需要输入自己账户密码。
               使用权限&#xff1a;在 /etc/sudoers 中有出现的使用者
               sudo -l                              //列出目前的权限
               $ sudo -u yao vi ~www/index.html    //以 yao 用户身份编辑  home 目录下www目录中的 index.html 文件
-            </pre> 
+            </code></pre>
             <h3><a id="75%09grep_162"></a>7.5 grep</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               grep -i &#34;the&#34; demo_file              //在文件中查找字符串(不区分大小写)
               grep -A 3 -i &#34;example&#34; demo_text     //输出成功匹配的行&#xff0c;以及该行之后的三行
               grep -r &#34;ramesh&#34; *                   //在一个文件夹中递归查询包含指定字符串的文件
-            </pre> 
+            </code></pre>
             <h3><a id="76%09service_167"></a>7.6 service</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               说明&#xff1a;service命令用于运行System V init脚本&#xff0c;这些脚本一般位于/etc/init.d文件下&#xff0c;这个命令可以直接运行这个文件夹里面的脚本&#xff0c;而不用加上路径
               service ssh status      //查看服务状态 
               service --status-all    //查看所有服务状态 
               service ssh restart     //重启服务 
-            </pre> 
+            </code></pre>
             <h3><a id="77%09free_172"></a>7.7 free</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               说明&#xff1a;这个命令用于显示系统当前内存的使用情况&#xff0c;包括已用内存、可用内存和交换内存的情况 
               free -g            //以G为单位输出内存的使用量&#xff0c;-g为GB&#xff0c;-m为MB&#xff0c;-k为KB&#xff0c;-b为字节 
               free -t            //查看所有内存的汇总
-            </pre> 
+            </code></pre>
             <h3><a id="78%09top_176"></a>7.8 top</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
                  top               //显示当前系统中占用资源最多的一些进程, shift&#43;m 按照内存大小查看
-            </pre> 
+            </code></pre>
             <h3><a id="79%09df_178"></a>7.9 df</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               说明&#xff1a;显示文件系统的磁盘使用情况
               df -h            //一种易看的显示
-            </pre> 
+            </code></pre>
             <h3><a id="710%09mount_181"></a>7.10 mount</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               mount /dev/sdb1 /u01              //挂载一个文件系统&#xff0c;需要先创建一个目录&#xff0c;然后将这个文件系统挂载到这个目录上
               dev/sdb1 /u01 ext2 defaults 0 2   //添加到fstab中进行自动挂载&#xff0c;这样任何时候系统重启的时候&#xff0c;文件系统都会被加载 
-            </pre> 
+            </code></pre>
             <h3><a id="711%09uname_184"></a>7.11 uname</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               说明&#xff1a;uname可以显示一些重要的系统信息&#xff0c;例如内核名称、主机名、内核版本号、处理器类型之类的信息 
               uname -a
-            </pre> 
+            </code></pre>
             <h3><a id="712%09yum_187"></a>7.12 yum</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               说明&#xff1a;安装插件命令
               yum install httpd      //使用yum安装apache 
               yum update httpd       //更新apache 
               yum remove httpd       //卸载/删除apache 
-            </pre> 
+            </code></pre>
             <h3><a id="713%09rpm_192"></a>7.13 rpm</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               说明&#xff1a;插件安装命令
               rpm -ivh httpd-2.2.3-22.0.1.el5.i386.rpm      //使用rpm文件安装apache 
               rpm -uvh httpd-2.2.3-22.0.1.el5.i386.rpm      //使用rpm更新apache 
               rpm -ev httpd                                 //卸载/删除apache 
-            </pre> 
+            </code></pre>
             <h3><a id="714%09date_197"></a>7.14 date</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
                date -s &#34;01/31/2010 23:59:53&#34;   ///设置系统时间
-            </pre> 
+            </code></pre>
             <h3><a id="715%09wget_199"></a>7.15 wget</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
               说明&#xff1a;使用wget从网上下载软件、音乐、视频 
               示例&#xff1a;wget http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.1.tar.gz
               //下载文件并以指定的文件名保存文件
               wget -O nagios.tar.gz http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-3.2.1.tar.gz
-            </pre> 
+            </code></pre>
             <h3><a id="716%09ftp_204"></a>7.16 ftp</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
                ftp IP/hostname    //访问ftp服务器
                mls *.html -       //显示远程主机上文件列表
-            </pre> 
+            </code></pre>
             <h3><a id="717%09scp_207"></a>7.17 scp</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
               	scp /opt/data.txt  192.168.1.101:/opt/    //将本地opt目录下的data文件发送到192.168.1.101服务器的opt目录下
-            </pre> 
+            </code></pre>
             <h2><a id="_209"></a>八、系统管理</h2> 
             <h3><a id="81%09_210"></a>8.1 防火墙操作</h3> 
-            <pre id="content">  
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
 service iptables status      //查看iptables服务的状态
 service iptables start       //开启iptables服务
 service iptables stop        //停止iptables服务
@@ -321,15 +321,15 @@ chkconfig iptables on        //开启iptables服务的开机自启动
 systemctl status firewalld.service     //查看防火墙状态
 systemctl stop firewalld.service       //关闭运行的防火墙
 systemctl disable firewalld.service    //永久禁止防火墙服务
-            </pre> 
+            </code></pre>
             <h3><a id="82%09CentOS_7_221"></a>8.2 修改主机名&#xff08;CentOS 7&#xff09;</h3> 
-            <pre id="content">  hostnamectl set-hostname 主机名
-            </pre> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  hostnamectl set-hostname 主机名
+            </code></pre>
             <h3><a id="83%09_223"></a>8.3 查看网络</h3> 
-            <pre id="content">  ifconfig
-            </pre> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  ifconfig
+            </code></pre>
             <h3><a id="84%09IP_225"></a>8.4 修改IP</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
  修改网络配置文件&#xff0c;文件地址&#xff1a;/etc/sysconfig/network-scripts/ifcfg-eth0
  ------------------------------------------------
  主要修改以下配置&#xff1a;  
@@ -344,37 +344,37 @@ systemctl disable firewalld.service    //永久禁止防火墙服务
  ONBOOT&#61;yes                  //系统启动时启动此设置
  -------------------------------------------------
  修改保存以后使用命令重启网卡&#xff1a;service network restart
-            </pre> 
+            </code></pre>
             <h3><a id="85%09_240"></a>8.5 配置映射</h3> 
- <pre id="content">  
+ <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>  
  修改文件&#xff1a; vi /etc/hosts
  在文件最后添加映射地址&#xff0c;示例如下&#xff1a;
  192.168.1.101  node1
  192.168.1.102  node2
  192.168.1.103  node3
  配置好以后保存退出&#xff0c;输入命令&#xff1a;ping node1 &#xff0c;可见实际 ping 的是 192.168.1.101。
-            </pre> 
+            </code></pre>
             <h3><a id="86%09_247"></a>8.6 查看进程</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               ps -ef         //查看所有正在运行的进程
-            </pre> 
+            </code></pre>
             <h3><a id="87%09_249"></a>8.7 结束进程</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
               kill pid       //杀死该pid的进程
               kill -9 pid    //强制杀死该进程   
-            </pre> 
+            </code></pre>
             <h3><a id="88%09_252"></a>8.8 查看链接</h3> 
-            <pre id="content"> 
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code> 
               ping IP        //查看与此IP地址的连接情况
               netstat -an    //查看当前系统端口
               netstat -an | grep 8080     //查看指定端口
-            </pre> 
+            </code></pre>
             <h3><a id="89%09_256"></a>8.9 快速清屏</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
                ctrl&#43;l        //清屏&#xff0c;往上翻可以查看历史操作
-            </pre> 
+            </code></pre>
             <h3><a id="810%09_258"></a>8.10 远程主机</h3> 
-            <pre id="content">
+            <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
                ssh IP       //远程主机&#xff0c;需要输入用户名和密码
             </pre>
                             </div>
@@ -386,24 +386,24 @@ systemctl disable firewalld.service    //永久禁止防火墙服务
  <!-- 文章内容 -->
         </div>
     </div>
-  <script>
-        // 显示最后修改日期和时间
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
-        
-        // 设置文章标题
-        document.getElementById('articleTitle').textContent = "Your Article Title"; 
+    <script>
+      function copyToClipboard(button) {
+          const pre = button.parentElement;
+          const code = pre.querySelector('code').innerText;
+          navigator.clipboard.writeText(code).then(() => {
+              button.textContent = '已复制';
+              setTimeout(() => {
+                  button.textContent = '一键复制';
+              }, 2000);
+          }).catch(err => {
+              console.log('复制失败', err);
+          });
+      }
+// 显示最后修改日期和时间
+document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
 
-   
-        function copyToClipboard() {
-        const codeBlock = document.getElementById('codeBlock');
-        const textArea = document.createElement('textarea');
-        textArea.value = codeBlock.textContent;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        alert('内容已复制到剪贴板');
-    }
-   </script>
+// 设置文章标题
+document.getElementById('articleTitle').textContent = "Your Article Title"; 
+</script>
 </body>
 </html>

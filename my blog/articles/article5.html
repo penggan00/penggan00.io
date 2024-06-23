@@ -18,39 +18,7 @@
         <div class="date" id="lastModified"></div> <!-- 定义一个类为date的div，显示日期与时间 -->
         <div class="content"> <!-- 定义一个类为content的div -->
             <!-- 文章内容 -->
-              
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title></title>
-                <style>
-                    pre {
-                        position: relative;
-                        padding: 1em;
-                        background: #f5f5f5;
-                        border: 1px solid #ccc;
-                        border-radius: 5px;
-                        overflow: auto;
-                    }
-                    .copy-button {
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                        padding: 5px 10px;
-                        background: #007bff;
-                        color: #fff;
-                        border: none;
-                        border-radius: 3px;
-                        cursor: pointer;
-                    }
-                    .copy-button:hover {
-                        background: #0056b3;
-                    }
-                </style>
-            </head>
-            <body>
+
              
                 <p>玩客云Armbian固件下载地址：<a href="https://github.com/hzyitc/armbian-onecloud/releases" target="_blank">https://github.com/hzyitc/armbian-onecloud/releases</a></p>
                 <p>需要注意的是，CasaOS还不能支持最新版的底包，所以我们需要下载之前的老版本。在下载页面上往下拉，找到6.1.9这个版本。我们需要去下载带mini和burn字样的刷机包。mini代表最小安装包，burn代表线刷包。</p>
@@ -206,8 +174,11 @@
                 --restart unless-stopped \\
                 whyour/qinglong:2.10.13</code>
                 </pre>
-            
-                <script>
+
+                 <!-- 文章内容 -->
+            </div>
+        </div>
+         <script>
                     function copyToClipboard(button) {
                         const pre = button.parentElement;
                         const code = pre.querySelector('code').innerText;
@@ -220,15 +191,6 @@
                             console.log('复制失败', err);
                         });
                     }
-                </script>
-            </body>
-            </html>
-            
-            
- <!-- 文章内容 -->
-        </div>
-    </div>
-  <script>
         // 显示最后修改日期和时间
         document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
         

@@ -30,29 +30,26 @@ a {
     margin-right: 11px;
 }
 pre {
-    background: #eee;
-    padding: 15px;
+    position: relative;
+    padding: 1em;
+    background: #f5f5f5;
     border: 1px solid #ccc;
     border-radius: 5px;
-    white-space: pre-wrap; /* 折行 */
-    word-wrap: break-word; /* 防止长单词破坏布局 */
-    overflow: auto; /* 允许滚动条 */
-}
-
-.copy-container {
-    position: relative;
-    display: inline-block;
+    overflow: auto;
 }
 .copy-button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
     padding: 5px 10px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
+    background: #007bff;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.copy-button:hover {
+    background: #0056b3;
 }
 
         .content  h1{
