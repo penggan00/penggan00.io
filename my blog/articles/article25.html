@@ -40,7 +40,28 @@
             <hr>
             <h3 id="3-创建管理后台"><a href="#3-创建管理后台" class="headerlink" title="3. 创建管理后台"></a>3. 创建管理后台</h3><ul>
             <li>3.1 回到 <strong>Workers 和 Pages</strong> &gt; <strong>D1</strong> &gt; <strong>创建数据库</strong> &gt; <strong>仪表盘</strong> &gt; 数据库名称<code>img</code><em>(名称可取任意值)</em> &gt; <strong>创建</strong></li>
-            <li>3.2 进入<code>img</code>数据库 &gt; <strong>控制台</strong> &gt; <code>粘贴以下代码</code>后 &gt; 点击<strong>执行</strong> &gt; 等待提示<strong>此查询已成功执行。</strong>  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> tgimglog;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> tgimglog (</span><br><span class="line">    `id` <span class="type">integer</span> <span class="keyword">PRIMARY</span> KEY <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    `url` text,</span><br><span class="line">    `referer` text,</span><br><span class="line">    `ip` <span class="type">varchar</span>(<span class="number">255</span>),</span><br><span class="line">    `<span class="type">time</span>` <span class="type">DATE</span></span><br><span class="line">);</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> imginfo;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> imginfo (</span><br><span class="line">    `id` <span class="type">integer</span> <span class="keyword">PRIMARY</span> KEY <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">    `url` text,</span><br><span class="line">    `referer` text,</span><br><span class="line">    `ip` <span class="type">varchar</span>(<span class="number">255</span>),</span><br><span class="line">    `rating` text,</span><br><span class="line">    `total` <span class="type">integer</span>,</span><br><span class="line">    `<span class="type">time</span>` <span class="type">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
+            <li>3.2 进入<code>img</code>数据库 &gt; <strong>控制台</strong> &gt; <code>粘贴以下代码</code>后 &gt; 点击<strong>执行</strong> &gt; 等待提示<strong>此查询已成功执行。</strong>  
+                <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
+DROP TABLE IF EXISTS tgimglog;
+CREATE TABLE IF NOT EXISTS tgimglog (
+    `id` integer PRIMARY KEY NOT NULL,
+    `url` text,
+    `referer` text,
+    `ip` varchar(255),
+    `time` DATE
+);
+DROP TABLE IF EXISTS imginfo;
+CREATE TABLE IF NOT EXISTS imginfo (
+    `id` integer PRIMARY KEY NOT NULL,
+    `url` text,
+    `referer` text,
+    `ip` varchar(255),
+    `rating` text,
+    `total` integer,
+    `time` DATE
+);
+
+</code></pre>
             <li>3.3 回到 <strong>Workers 和 Pages &#x2F;</strong><code>telegraph-Image</code>项目 &gt; <strong>设置</strong> &gt; <strong>函数</strong> &gt; <strong>D1 数据库绑定</strong> &gt; 变量名<code>IMG</code> &gt; <code>img</code>数据库 &gt; 点击<strong>保存</strong></li>
             <li>3.4 回到 <strong>Workers 和 Pages &#x2F;</strong><code>telegraph-Image</code>项目 &gt; <strong>设置</strong> &gt; <strong>环境变量</strong> &gt; <strong>为生产环境定义变量</strong> &gt; 变量内容如下:<ul>
             <li>变量名<code>BASIC_USER</code>，值为你的<strong>后台管理员用户名</strong></li>
@@ -99,12 +120,24 @@
  <!-- 文章内容 -->
         </div>
     </div>
-  <script>
-        // 显示最后修改日期和时间
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
-        
-        // 设置文章标题
-        document.getElementById('articleTitle').textContent = "Your Article Title"; 
-    </script>
+    <script>
+        function copyToClipboard(button) {
+            const pre = button.parentElement;
+            const code = pre.querySelector('code').innerText;
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = '已复制';
+                setTimeout(() => {
+                    button.textContent = '一键复制';
+                }, 2000);
+            }).catch(err => {
+                console.log('复制失败', err);
+            });
+        }
+// 显示最后修改日期和时间
+document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
+
+// 设置文章标题
+document.getElementById('articleTitle').textContent = "Your Article Title"; 
+</script>
 </body>
 </html>
