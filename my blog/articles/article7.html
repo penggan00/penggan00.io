@@ -52,37 +52,37 @@
                     <h2>安装教程：</h2>
                     <h3>运行后端：</h3>
                     <div class="code">
-                        <pre>
+                        <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             cd backend
             echo "OPENAI_API_KEY=sk-your-key" > .env
             poetry install
             poetry shell
             poetry run uvicorn main:app --reload --port 7001
-                        </pre>
+                        </code></pre>
                     </div>
                     <p>如果您想使用 Anthropic，请将与您的 Anthropic 的 API 密钥一起添加到 backend/.env 文件中。</p>
                     <h3>运行前端：</h3>
                     <div class="code">
-                        <pre>
+                        <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             cd frontend
             yarn
             yarn dev
-                        </pre>
+                        </code></pre>
                     </div>
                     <p>打开 <a href="http://localhost:5173">http://localhost:5173</a> 以使用该应用程序。</p>
                     <h3>调试模式：</h3>
                     <p>如果您不想浪费 GPT4-Vision 积分，您可以在模拟模式下运行后端（该模式会传输预先录制的响应）：</p>
                     <div class="code">
-                        <pre>
+                        <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             MOCK=true poetry run uvicorn main:app --reload --port 7001
-                        </pre>
+                        </code></pre>
                     </div>
                     <h3>Docker 一键安装命令：</h3>
                     <div class="code">
-                        <pre>
+                        <pre><button class="copy-button" onclick="copyToClipboard(this)">一键复制</button><code>
             echo "OPENAI_API_KEY=sk-your-key" > .env
             docker-compose up -d --build
-                        </pre>
+                        </code></pre>
                     </div>
                  
             
@@ -92,12 +92,6 @@
  <!-- 文章内容 -->
         </div>
     </div>
-  <script>
-        // 显示最后修改日期和时间
-        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
-        
-        // 设置文章标题
-        document.getElementById('articleTitle').textContent = "Your Article Title"; 
-    </script>
+    <script src="script.js"></script> <!-- 引用外部JavaScript文件 -->
 </body>
 </html>
