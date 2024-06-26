@@ -23,8 +23,8 @@ body { /* 设置body元素的样式 */
 pre {
     position: relative;
     padding: 1em;
-    background: #000000;
-    border: 1px solid #ffffff;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
     border-radius: 5px;
     overflow: auto;
     white-space: pre-wrap; /* This will ensure the text wraps */
@@ -41,10 +41,10 @@ pre {
     border-radius: 3px;
     cursor: pointer;
 }
-
 code {
     font-family: Consolas, "Courier New", monospace;
-    color: #ffffff;
+    
+    font-size: 0.9em; /* 设置字体大小 */
 }
 
 a {
@@ -57,17 +57,6 @@ a {
     margin-right: 11px;
 }
 
-pre code .line-number {
-    display: inline-block;
-    width: 2em;
-    user-select: none;
-    opacity: 0.5;
-    text-align: right;
-    margin-right: 1em;
-    counter-increment: line;
-    content: counter(line);
-}
-
 
 .copy-button:hover {
     background: #0056b3;
@@ -77,7 +66,6 @@ pre code .line-number {
 .content  h1{
     font-size: 1em; /* 设置字体大小 */
 }
-
        
  img {
             max-width: 100%;
