@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- 声明文档类型 -->
+<html lang="en"> <!-- 设置文档语言为英语 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置文档字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置视口，以确保页面在移动设备上正确显示 -->
+    <title>My Blog</title> <!-- 设置页面标题 -->
+    <link rel="stylesheet" href="styles.css"> <!-- 引入外部CSS文件 -->
+</head>
+<body>
+<div class="header"> <!-- 定义一个类为header的div -->
+            <a href="../../index.html">My home</a> <!-- 链接内容 -->
+        </div>
+    <div class="container"> <!-- 定义一个类为container的div -->
+        
+        <div class="subheader"> <!-- 定义一个类为subheader的div -->
+            <h2>咪咕盒子 MIGU-JT-U2 安装第三方软件教程</h2>
+        </div>
+        <div class="date" id="lastModified"></div> <!-- 定义一个类为date的div，显示日期与时间 -->
+        <div class="content"> <!-- 定义一个类为content的div -->
+            <!-- 文章内容 -->
+              
+        
+          
+            <p>大致的看了下，还是发现用拆机 TTL 大法能轻松解决应用安装问题，以下是安装教程：</p>
+            <ol>
+                <li>
+                    <p>准备工具：U盘、TTL 转 USB 线（CH340G 或 2303 皆可）、下载 putty（下载地址：http://down.tvapk.com//data/1606/putty.zip）</p>
+                </li>
+                <li>
+                    <p>首先跟卖家索取 TTL 转 USB 线的驱动，并安装；</p>
+                </li>
+                <li>
+                    <p>右键我的电脑——属性——设备管理器——端口——COM"X"（X 就是最后位数字）——属性——端口设置——改为“115200”——确定；</p>
+                    <img src="https://img.penggan.cloudns.be/file/a274b798cfd1cff6ee7b7.jpg" />
+                </li>
+                <li>
+                    <p>下载软件到 U 盘，然后修改文件名字（参考下方修改），接着将 U 盘插入咪咕盒子 MIGU-JT-U2 盒子 USB 接口，</p>
+                    <ul>
+                        <li>dangbei1.apk ----->当贝桌面(下载：http://www.dangbei.com/zhuomian/)</li>
+                        <li>dangbei2.apk ----->当贝市场(下载：https://webapk.dangbei.net/update/dangbeimarket.apk)</li>
+                    </ul>
+                </li>
+                <li>
+                    <p>接入 TTL 线，按照图中方式接线，1=RX 2=TX 最右=GND；</p>
+                    <img src="https://img.penggan.cloudns.be/file/0e99d664595eb7a763dac.jpg" />
+                </li>
+                <li>
+                    <p>打开 putty.exe，按图中的顺序设置即可，COM 后面的数字按照自己电脑的数字输入即可，设置完成选择 open，接着机顶盒通电开启盒子，此时 putty 会开始跑代码（如果没有跑代码就将机顶盒上 TTL 线的 RX 和 TX 对调一下）；</p>
+                </li>
+                <img src="https://img.penggan.cloudns.be/file/53ece0a3064a8b8d12fdd.jpg" />
+                <li>
+                    <p>开始安装：</p>
+                    <ul>
+                        <li>cd /mnt/usbhost/Storage01，进入 U 盘</li>
+                        <li>pm install dangbei2.apk，安装当贝市场，当显示 Success，即可成功；</li>
+                        <li>mount -r -w -o remount /system，挂载系统路径；</li>
+                        <li>cp dangbei1.apk /system/app，复制当贝桌面到系统路径；</li>
+                        <li>chmod 644 /system/app/dangbei1.apk，给予当贝桌面权限，实现自启动；</li>
+                        <li>am start com.dangbei.tvlaunhcer，启动当贝桌面；</li>
+                        <li>cd /system/app，进入系统 app 路径；</li>
+                        <li>rm Update.apk，删除系统更新；</li>
+                        <li>rm CMCC_AUTH_ZJ_V1.1_20150506_17_signed.apk，删除检测终端；</li>
+                        <li>rm CMCCAuth.apk，删除检测终端；</li>
+                    </ul>
+                    <img src="https://img.penggan.cloudns.be/file/112e612c462fdf3c1f7e0.png" />
+                    <img src="https://img.penggan.cloudns.be/file/fb25ff787afceeb15d83d.png" />
+                    <img src="https://img.penggan.cloudns.be/file/9aa3390452e209e583457.jpg" />
+                </li>
+            </ol>
+            ```
+            
+ <!-- 文章内容 -->
+        </div>
+    </div>
+  <script>
+        // 显示最后修改日期和时间
+        document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString(); 
+        
+        // 设置文章标题
+        document.getElementById('articleTitle').textContent = "Your Article Title"; 
+    </script>
+</body>
+</html>
