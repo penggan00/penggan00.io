@@ -52,37 +52,33 @@
                     <h2>安装教程：</h2>
                     <h3>运行后端：</h3>
                     <div class="code">
-                       <div class="code-container"><button class="copy-button">复制</button><pre><code id="code-block">
-cd backend
+                       <pre><button class="copy-button" onclick="copyToClipboard(this)">复制</button><code>cd backend
 echo "OPENAI_API_KEY=sk-your-key" > .env
 poetry install
 poetry shell
 poetry run uvicorn main:app --reload --port 7001
-                        </code></pre>
+</code></pre>
                     </div>
                     <p>如果您想使用 Anthropic，请将与您的 Anthropic 的 API 密钥一起添加到 backend/.env 文件中。</p>
                     <h3>运行前端：</h3>
                     <div class="code">
-                       <div class="code-container"><button class="copy-button">复制</button><pre><code id="code-block">
-cd frontend
+                       <pre><button class="copy-button" onclick="copyToClipboard(this)">复制</button><code>cd frontend
 yarn
 yarn dev
-                        </code></pre>
+</code></pre>
                     </div>
                     <p>打开 <a href="http://localhost:5173">http://localhost:5173</a> 以使用该应用程序。</p>
                     <h3>调试模式：</h3>
                     <p>如果您不想浪费 GPT4-Vision 积分，您可以在模拟模式下运行后端（该模式会传输预先录制的响应）：</p>
                     <div class="code">
-                       <div class="code-container"><button class="copy-button">复制</button><pre><code id="code-block">
-MOCK=true poetry run uvicorn main:app --reload --port 7001
-                        </code></pre>
+                       <pre><button class="copy-button" onclick="copyToClipboard(this)">复制</button><code>MOCK=true poetry run uvicorn main:app --reload --port 7001
+</code></pre>
                     </div>
                     <h3>Docker 一键安装命令：</h3>
                     <div class="code">
-                       <div class="code-container"><button class="copy-button">复制</button><pre><code id="code-block">
-echo "OPENAI_API_KEY=sk-your-key" > .env
+                       <pre><button class="copy-button" onclick="copyToClipboard(this)">复制</button><code>echo "OPENAI_API_KEY=sk-your-key" > .env
 docker-compose up -d --build
-                        </code></pre>
+</code></pre>
                     </div>
                  
             

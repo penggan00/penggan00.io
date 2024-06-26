@@ -41,8 +41,7 @@
             <h3 id="3-创建管理后台"><a href="#3-创建管理后台" class="headerlink" title="3. 创建管理后台"></a>3. 创建管理后台</h3><ul>
             <li>3.1 回到 <strong>Workers 和 Pages</strong> &gt; <strong>D1</strong> &gt; <strong>创建数据库</strong> &gt; <strong>仪表盘</strong> &gt; 数据库名称<code>img</code><em>(名称可取任意值)</em> &gt; <strong>创建</strong></li>
             <li>3.2 进入<code>img</code>数据库 &gt; <strong>控制台</strong> &gt; <code>粘贴以下代码</code>后 &gt; 点击<strong>执行</strong> &gt; 等待提示<strong>此查询已成功执行。</strong>  
-               <div class="code-container"><button class="copy-button">复制</button><pre><code id="code-block">
-DROP TABLE IF EXISTS tgimglog;
+               <pre><button class="copy-button" onclick="copyToClipboard(this)">复制</button><code>DROP TABLE IF EXISTS tgimglog;
 CREATE TABLE IF NOT EXISTS tgimglog (
     `id` integer PRIMARY KEY NOT NULL,
     `url` text,
@@ -60,7 +59,6 @@ CREATE TABLE IF NOT EXISTS imginfo (
     `total` integer,
     `time` DATE
 );
-
 </code></pre>
             <li>3.3 回到 <strong>Workers 和 Pages &#x2F;</strong><code>telegraph-Image</code>项目 &gt; <strong>设置</strong> &gt; <strong>函数</strong> &gt; <strong>D1 数据库绑定</strong> &gt; 变量名<code>IMG</code> &gt; <code>img</code>数据库 &gt; 点击<strong>保存</strong></li>
             <li>3.4 回到 <strong>Workers 和 Pages &#x2F;</strong><code>telegraph-Image</code>项目 &gt; <strong>设置</strong> &gt; <strong>环境变量</strong> &gt; <strong>为生产环境定义变量</strong> &gt; 变量内容如下:<ul>

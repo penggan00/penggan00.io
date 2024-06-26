@@ -19,31 +19,29 @@ body { /* 设置body元素的样式 */
     font-weight: bold;
     text-decoration: none; /* 去除下划线 */
 }
-.code-container {
+
+pre {
     position: relative;
-    margin: 20px 0;
+    padding: 1em;
+    background: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    overflow: auto;
+    white-space: pre-wrap; /* This will ensure the text wraps */
 }
+
 .copy-button {
     position: absolute;
-    top: 10px;
+    top: 1px;
     right: 10px;
-    padding: 5px 10px;
+    padding: 5px px;
     background: #007bff;
     color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
-pre {
-    margin: 0;
-    padding: 15px;
-    background-color: #000000;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    overflow: auto;
-    white-space: pre-wrap; /* This will ensure the text wraps */
-    overflow: auto;
-}
+
 code {
     font-family: Consolas, "Courier New", monospace;
     color: #ffffff;
