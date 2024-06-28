@@ -23,7 +23,8 @@ body { /* 设置body元素的样式 */
 pre {
     position: relative;
     padding: 1em;
-    background: #f5f5f5;
+    background: #000000;
+    color: #ffffff; /* 设置文字颜色 */
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: auto;
