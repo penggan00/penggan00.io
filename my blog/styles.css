@@ -12,36 +12,35 @@ body {
     padding-right: 10px;
 }
 main {
-   
-   
-   
+      
 }
 
 /* 设置页眉部分的样式，背景色为 #f7f7f7，带有轻微阴影效果，文本居中显示，固定在页面顶部，z-index 属性用于层叠顺序 */
 header {
     background-color: #f7f7f7; /* 设置背景色 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
-    padding: 10px 20px; /* 设置内边距 */
-    text-align: center; /* 文本居中 */
+    padding: 0px 1px 10px 10px;
     position: sticky; /* 固定在页面顶部 */
     top: 0; /* 距离页面顶部 0 像素 */
     z-index: 1000; /* 设置层叠顺序 */
+    text-align: center;
+    
 }
 /* 设置页眉中 h1 标签的样式，去除默认的上下外边距，设置字体大小为 24px */
-header h1 {
-    margin: 0; /* 去除默认外边距 */
-    font-size: 24px; /* 设置字体大小 */
+
+header a{
     text-decoration: none; /* 去除下划线 */
-    color: #333; /* 设置文字颜色 */
+    margin: 0; /* 去除默认外边距 */
+    font-size: 20px; /* 设置字体大小 */
+    color: #000000; /* 设置文字颜色 */
+      justify-content: center; /* 水平居中显示 */
+    padding-right: 20px;
+    font-weight: bold;
 }
 a {
     text-decoration: none;
+    
   }
-
-header h1 a{
-    text-decoration: none; /* 去除下划线 */
-    color: #333; /* 设置文字颜色 */
-}
 
 
 /* 设置文章部分的样式，背景色为 #fff，带有阴影效果，下边距为 20px，内边距为 20px，边框圆角为 5px */
@@ -56,7 +55,7 @@ header h1 a{
 
 /* 设置文章标题的样式，去除默认的上下外边距，设置字体大小为 18px，文本左对齐 */
 .post h2 {
-    font-size: 17px; /* 设置字体大小 */
+    font-size: 15px; /* 设置字体大小 */
     text-align: left; /* 文本左对齐 */
     margin-top: 0; /* 去除上外边距 */
     margin-bottom: 0; /* 去除下外边距 */
@@ -108,12 +107,13 @@ footer {
 /* 设置搜索输入框的样式，宽度为 100%，最大宽度为 600px，内边距为 10px，字体大小为 16px */
 #search-input {
     width: 100%; /* 设置宽度 */
-    max-width: 600px; /* 设置最大宽度 */
+    max-width: 200px; /* 设置最大宽度 */
     padding: 10px; /* 设置内边距 */
-    font-size: 16px; /* 设置字体大小 */
+    font-size: 15px; /* 设置字体大小 */
     margin-top: 10px;  /* 元素上方外边距为 20 像素*/
-    margin-bottom: 0px; /* 设置下边距 */
+
 }
+
 .pagination button.active {
     font-weight: bold; /* 当前页码按钮加粗 */
     background-color: #ddd; /* 背景颜色 */
