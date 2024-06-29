@@ -1,6 +1,5 @@
 /* 设置整个页面的字体为 Arial 或 sans-serif，背景色为 #f7f7f7，文字颜色为 #333，去除页面的默认边距和内边距 */
 body {
-    font-family: Arial, sans-serif; /* 设置字体 */
     background-color: #f7f7f7; /* 设置背景色 */
     color: #333; /* 设置文字颜色 */
     margin: 0; /* 去除页面默认外边距 */
@@ -32,7 +31,7 @@ header a{
     text-decoration: none; /* 去除下划线 */
     margin: 0; /* 去除默认外边距 */
     font-size: 20px; /* 设置字体大小 */
-    color: #000000; /* 设置文字颜色 */
+    color: #333; /* 设置文字颜色 */
       justify-content: center; /* 水平居中显示 */
     padding-right: 20px;
     font-weight: bold;
@@ -45,17 +44,17 @@ a {
 
 /* 设置文章部分的样式，背景色为 #fff，带有阴影效果，下边距为 20px，内边距为 20px，边框圆角为 5px */
 .post {
-    background-color: #fff; /* 设置背景色 */
+    background-color: #ffffff; /* 设置背景色 */
     margin-top: 6px;  /* 上边距为 20 像素 */
     margin-bottom: 1px; /* 设置下边距 */
     border-radius: 5px; /* 设置边框圆角 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影效果 */
-    padding: 10px 20px; /* 设置内边距 */
+    padding: 11px 20px; /* 设置内边距 */
 }
 
 /* 设置文章标题的样式，去除默认的上下外边距，设置字体大小为 18px，文本左对齐 */
 .post h2 {
-    font-size: 15px; /* 设置字体大小 */
+    font-size: 20px; /* 设置字体大小 */
     text-align: left; /* 文本左对齐 */
     margin-top: 0; /* 去除上外边距 */
     margin-bottom: 0; /* 去除下外边距 */
@@ -108,15 +107,15 @@ footer {
 #search-input {
     width: 100%; /* 设置宽度 */
     max-width: 200px; /* 设置最大宽度 */
-    padding: 10px; /* 设置内边距 */
+    padding: 5px; /* 设置内边距 */
     font-size: 15px; /* 设置字体大小 */
     margin-top: 10px;  /* 元素上方外边距为 20 像素*/
 
 }
 
 .pagination button.active {
-    font-weight: bold; /* 当前页码按钮加粗 */
-    background-color: #ddd; /* 背景颜色 */
+
+    background-color: #ffffff; /* 背景颜色 */
 }
 
 
@@ -152,6 +151,12 @@ button {
         justify-content: center; /* 水平居中显示 */
         margin-top: 0px;     /*  元素上方外边距为 20 像素 */
     }
-
+    .post h2 {
+        font-size: 15px; /* 设置字体大小 */
+        text-align: left; /* 文本左对齐 */
+        margin-top: 0; /* 去除上外边距 */
+        margin-bottom: 0; /* 去除下外边距 */
+        padding: 0; /* 去除内边距 */
+    }
 
 }
