@@ -55,7 +55,7 @@ a {
 
 /* 设置文章标题的样式，去除默认的上下外边距，设置字体大小为 18px，文本左对齐 */
 .post h2 {
-    font-size: 20px; /* 设置字体大小 */
+    font-size: 16px; /* 设置字体大小 */
     text-align: left; /* 文本左对齐 */
     margin-top: 0; /* 去除上外边距 */
     margin-bottom: 0; /* 去除下外边距 */

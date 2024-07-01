@@ -76,22 +76,13 @@ a {
 }
 
 .search-box {
-    width: 80px; /* 设置搜索框宽度 */
-    padding: 10px; /* 内边距 5 像素 */
+    width: 110px; /* 设置搜索框宽度 */
+    padding: 6px; /* 内边距 5 像素 */
     border: 1px solid #ccc; /* 边框为 1 像素实线灰色 */
     border-radius: 3px; /* 边框半径 3 像素 */
     margin-right: 10px; /* 右外边距 10 像素 */
 }
 
-.search-button {
-    padding: 5px 10px; /* 内边距 5 像素 10 像素 */
-    background-color: #333; /* 背景颜色为深灰色 */
-    color: white; /* 文本颜色为白色 */
-    border: none; /* 无边框 */
-    border-radius: 3px; /* 边框半径 3 像素 */
-    cursor: pointer; /* 鼠标悬停时光标为指针 */
-    padding: 10px; /* 内边距 10 像素 */
-}
 
 .search-button:hover {
     background-color: #555; /* 鼠标悬停时背景颜色变深 */
