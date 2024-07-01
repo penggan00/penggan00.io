@@ -106,16 +106,15 @@ footer {
 /* 设置搜索输入框的样式，宽度为 100%，最大宽度为 600px，内边距为 10px，字体大小为 16px */
 #search-input {
     width: 100%; /* 设置宽度 */
-    max-width: 200px; /* 设置最大宽度 */
-    padding: 5px; /* 设置内边距 */
-    font-size: 15px; /* 设置字体大小 */
+    max-width: 160px; /* 设置最大宽度 */
+    padding: 4px; /* 设置内边距 */
+    font-size: 13px; /* 设置字体大小 */
     margin-top: 10px;  /* 元素上方外边距为 20 像素*/
-
 }
 
 .pagination button.active {
-
-    background-color: #ffffff; /* 背景颜色 */
+    background-color: #000; /* 设置背景色 */
+    color: #ffffff; /* 设置文字颜色 */
 }
 
 

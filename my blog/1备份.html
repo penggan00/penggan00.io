@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>peng gan blog</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <a href="../index.html">My Blog</a>
-         <class="search-container">
-            <input type="text" id="search-input" placeholder="Search articles..." oninput="searchArticles()"> <!-- 搜索框，输入时触发searchArticles函数 --> 
-            
+        <class="search-container">
+            <input type="text" id="search-input" placeholder="Search articles..." oninput="searchArticles()">
+        </div>
     </header>
     <main>
-        <div id="articles"></div> <!-- 文章容器 -->
-        <div class="pagination"></div> <!-- 分页容器 -->
+        <div id="articles"></div>
+        <div class="pagination"></div>
     </main>
     <script>
         const articles = [
@@ -28,7 +28,7 @@
             { title: "TV更改NTP&刷机", link: "articles/articles/article6.html", lastModified: "2024-06-09 16:20:00" }, 
             { title: "高效的仿站神器", link: "articles/articles/article7.html", lastModified: "2024-06-09 17:00:00" }, 
             { title: "工作自信小技巧", link: "articles/articles/article8.html", lastModified: "2024-06-10 13:10:00" }, 
-            { title: "7个非常有意思的暗网！", link: "articles/articles/article9.html", lastModified: "2024-06-11 11:55:00" }, 
+            { title: "7个非常有意思的暗网", link: "articles/articles/article9.html", lastModified: "2024-06-11 11:55:00" }, 
             { title: "咪咕盒子 MIGU-JT-U2", link: "articles/articles/article10.html", lastModified: "2024-06-11 10:05:00" }, 
             { title: "开发者office", link: "articles/articles/article11.html", lastModified: "2024-06-11 14:40:00" }, 
             { title: "iStoreOS教程", link: "articles/articles/article12.html", lastModified: "2024-06-11 09:00:00" },
@@ -44,32 +44,42 @@
             { title: "905游戏盒子 dtb", link: "articles/articles/article22.html", lastModified: "2024-06-18 11:11:00" },
             { title: "开心电视助手6.2", link: "articles/articles/article23.html", lastModified: "2024-06-19 11:11:00" },
             { title: "最好用的视频播放软件", link: "articles/articles/article24.html", lastModified: "2024-06-20 11:11:00" },
-            { title: "自建图床", link: "articles/articles/article25.html", lastModified: "2024-06-20 12:11:00" },
+            { title: "clouflare开源图床", link: "articles/articles/article25.html", lastModified: "2024-06-20 12:11:00" },
             { title: "安卓最好的音乐播放器", link: "articles/articles/article26.html", lastModified: "2024-06-21 12:11:00" },
             { title: "Emuelec菜单汉化s905", link: "articles/articles/article27.html", lastModified: "2024-06-22 12:11:00" },
             { title: "Emuelec4.6 s905x2x3X4-s922", link: "articles/articles/article28.html", lastModified: "2024-06-23 12:11:00" },
             { title: "s905小容量TF卡刷入大镜像", link: "articles/articles/article29.html", lastModified: "2024-06-23 16:21:00" },
             { title: "网址大全", link: "articles/articles/article30.html", lastModified: "2094-06-23 16:21:00" },
             { title: "盘搜", link: "articles/articles/article31.html", lastModified: "2094-06-25 16:21:00" },
-            { title: "10年免费主机部署vless节点", link: "articles/articles/article32.html", lastModified: "2094-06-25 16:21:00" },
-            { title: "ClouDNS托管到cloudflare", link: "articles/articles/article33.html", lastModified: "2094-06-25 19:21:00" },
-            { title: "123", link: "articles/articles/article34.html", lastModified: "2094-06-27 00:21:00" },
-           
+            { title: "10年免费主机部署vless节点", link: "articles/articles/article32.html", lastModified: "2024-06-25 16:21:00" },
+            { title: "ClouDNS托管到cloudflare", link: "articles/articles/article33.html", lastModified: "2024-06-25 19:21:00" },
+            { title: "提取手机中的APK文件", link: "articles/articles/article34.html", lastModified: "2024-06-29 00:21:00" },
+            { title: "Telegram接入ChatGPT-4", link: "articles/articles/article35.html", lastModified: "2024-06-29 00:31:00" },
+            { title: "linux命令大全", link: "articles/articles/article36.html", lastModified: "2024-06-29 00:41:00" },
             
-        ]; 
 
-        let currentPage = 1; // 当前页码
-        const articlesPerPage = 10; // 每页显示的文章数量
+
+            
+
+            
+            
+
+
+
+        ];
+
+        let currentPage = 1;
+        const articlesPerPage = 2;
 
         function formatDate(dateString) {
             const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
             return new Date(dateString).toLocaleDateString('en-CA', options);
-        } // 格式化日期
+        }
 
         function displayArticles(articles, page) {
             const start = (page - 1) * articlesPerPage;
             const end = page * articlesPerPage;
-            const paginatedArticles = articles.slice(start, end); // 分页文章
+            const paginatedArticles = articles.slice(start, end);
 
             const articlesContainer = document.getElementById('articles');
             articlesContainer.innerHTML = '';
@@ -79,12 +89,11 @@
                 articleDiv.innerHTML = `
                     <h2><a href="${article.link}">${article.title}</a></h2>
                     <span class="timestamp">${formatDate(article.lastModified)}</span>
-                `; // 生成文章HTML
+                `;
                 articlesContainer.appendChild(articleDiv);
             });
 
-            const totalPages = Math.ceil(articles.length / articlesPerPage); // 总页数
-
+            const totalPages = Math.ceil(articles.length / articlesPerPage);
             const paginationContainer = document.querySelector('.pagination');
             paginationContainer.innerHTML = '';
 
@@ -93,38 +102,50 @@
             prevButton.onclick = prevPage;
             paginationContainer.appendChild(prevButton);
 
-            for (let i = 1; i <= Math.min(totalPages, 8); i++) {
-                const pageNumButton = document.createElement('button');
-                pageNumButton.textContent = i;
-                pageNumButton.onclick = function() {
-                    currentPage = i;
-                    loadArticles();
-                };
-                if (i === currentPage) pageNumButton.classList.add('active');
-                paginationContainer.appendChild(pageNumButton);
+            const pageNumbers = [];
+            if (totalPages <= 5) {
+                for (let i = 1; i <= totalPages; i++) {
+                    pageNumbers.push(i);
+                }
+            } else {
+                if (currentPage > 2) {
+                    pageNumbers.push(1);
+                    pageNumbers.push(2);
+                    if (currentPage > 3) pageNumbers.push('...');
+                }
+
+                if (currentPage > 1) pageNumbers.push(currentPage - 1);
+                pageNumbers.push(currentPage);
+                if (currentPage < totalPages) pageNumbers.push(currentPage + 1);
+
+                if (currentPage < totalPages - 1) {
+                    if (currentPage < totalPages - 2) pageNumbers.push('...');
+                    pageNumbers.push(totalPages - 1);
+                    pageNumbers.push(totalPages);
+                }
             }
 
-            if (totalPages > 5) {
-                const ellipsis = document.createElement('span');
-                ellipsis.textContent = "...";
-                paginationContainer.appendChild(ellipsis);
-
-                const lastPageButton = document.createElement('button');
-                lastPageButton.textContent = totalPages;
-                lastPageButton.onclick = function() {
-                    currentPage = totalPages;
-                    loadArticles();
-                };
-                if (totalPages === currentPage) lastPageButton.classList.add('active');
-                paginationContainer.appendChild(lastPageButton);
-            }
+            pageNumbers.forEach(pageNum => {
+                if (pageNum === '...') {
+                    const ellipsis = document.createElement('span');
+                    ellipsis.textContent = "...";
+                    paginationContainer.appendChild(ellipsis);
+                } else {
+                    const pageNumButton = document.createElement('button');
+                    pageNumButton.textContent = pageNum;
+                    pageNumButton.onclick = function() {
+                        currentPage = pageNum;
+                        loadArticles();
+                    };
+                    if (pageNum === currentPage) pageNumButton.classList.add('active');
+                    paginationContainer.appendChild(pageNumButton);
+                }
+            });
 
             const nextButton = document.createElement('button');
             nextButton.textContent = ">";
             nextButton.onclick = nextPage;
             paginationContainer.appendChild(nextButton);
-
-          
 
             const pageInput = document.createElement('input');
             pageInput.type = 'number';
@@ -136,34 +157,34 @@
                 loadArticles();
             };
             paginationContainer.appendChild(pageInput);
-        } // 显示文章
+        }
 
         function loadArticles() {
-            const sortedArticles = articles.sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified)); // 按修改时间排序文章
+            const sortedArticles = articles.sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified));
             displayArticles(sortedArticles, currentPage);
-        } // 加载文章
+        }
 
         function nextPage() {
             if ((currentPage * articlesPerPage) < articles.length) {
                 currentPage++;
                 loadArticles();
             }
-        } // 下一页
+        }
 
         function prevPage() {
             if (currentPage > 1) {
                 currentPage--;
                 loadArticles();
             }
-        } // 上一页
+        }
 
         function searchArticles() {
             const query = document.getElementById('search-input').value.toLowerCase();
             const filteredArticles = articles.filter(article => article.title.toLowerCase().includes(query));
             displayArticles(filteredArticles, 1);
-        } // 搜索文章
+        }
 
-        document.addEventListener('DOMContentLoaded', loadArticles); // 文档加载完成后加载文章
+        document.addEventListener('DOMContentLoaded', loadArticles);
     </script>
 </body>
 </html>
