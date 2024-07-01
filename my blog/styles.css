@@ -9,6 +9,7 @@ body {
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
+    margin: 0 auto; /* 将页面水平居中 */
 }
 main {
       
