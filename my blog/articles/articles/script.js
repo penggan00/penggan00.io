@@ -11,8 +11,5 @@ function copyToClipboard(button) {
     });
 }
 
-// 显示最后修改日期和时间
-document.getElementById('lastModified').textContent = new Date(document.lastModified).toLocaleString();
-
 // 设置文章标题
 document.getElementById('articleTitle').textContent = "Your Article Title";

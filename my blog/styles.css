@@ -5,7 +5,7 @@ body {
     margin: 0; /* 去除页面默认外边距 */
     padding: 0; /* 去除页面默认内边距 */
     align-items: center; /* 水平居中 */
-    max-width: 900px; /* 设置最大宽度为800px */
+    max-width: 800px; /* 设置最大宽度为800px */
     text-decoration: none;
     padding-left: 10px;
     padding-right: 10px;
@@ -55,7 +55,7 @@ a {
 
 /* 设置文章标题的样式，去除默认的上下外边距，设置字体大小为 18px，文本左对齐 */
 .post h2 {
-    font-size: 16px; /* 设置字体大小 */
+    font-size: 14px; /* 设置字体大小 */
     text-align: left; /* 文本左对齐 */
     margin-top: 0; /* 去除上外边距 */
     margin-bottom: 0; /* 去除下外边距 */
@@ -107,8 +107,8 @@ footer {
 /* 设置搜索输入框的样式，宽度为 100%，最大宽度为 600px，内边距为 10px，字体大小为 16px */
 #search-input {
     width: 100%; /* 设置宽度 */
-    max-width: 160px; /* 设置最大宽度 */
-    padding: 4px; /* 设置内边距 */
+    max-width: 150px; /* 设置最大宽度 */
+    padding: 4.5px; /* 设置内边距 */
     font-size: 13px; /* 设置字体大小 */
     margin-top: 10px;  /* 元素上方外边距为 20 像素*/
 }
@@ -152,7 +152,7 @@ button {
         margin-top: 0px;     /*  元素上方外边距为 20 像素 */
     }
     .post h2 {
-        font-size: 15px; /* 设置字体大小 */
+   
         text-align: left; /* 文本左对齐 */
         margin-top: 0; /* 去除上外边距 */
         margin-bottom: 0; /* 去除下外边距 */
